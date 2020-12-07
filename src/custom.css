@@ -1,0 +1,35 @@
+.jumbotron {
+    background-image: url(./images/resize1.jpg);
+    background-position: center center;
+    background-size: contain;
+    color: #e0e0e0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.col {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.gutterfix {
+    padding-left: 3%;
+    padding-right: 5%;
+}
+
+.copyright {
+    padding: 1.5em 0 0 1em;
+}
+
+footer {
+    background-color: #343a40;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    color: #e0e0e0;
+    bottom: 0;
+    width: 100%;
+    height: 3.5rem; 
+    margin-top: 4em;
+    font-size: 0.8em;
+}
+
