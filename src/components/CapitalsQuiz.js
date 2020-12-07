@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import countryInfo from '../countryInfo.json'
 
-
-const CapitalsQuiz = ({ countryData }) => {
+const CapitalsQuiz = () => {
 
     const getRandomCountry = () => {
-        let randomIndex = Math.floor(countryData.length * Math.random())
-        let randomCountry = countryData[randomIndex]
+        let randomIndex = Math.floor(countryInfo.length * Math.random())
+        let randomCountry = countryInfo[randomIndex]
         return randomCountry
     }
+    console.log(countryInfo)
 
     const makeRandomList = () => {
         let countryList = []
@@ -18,16 +19,11 @@ const CapitalsQuiz = ({ countryData }) => {
         return countryList
     }
 
-    let randomCountry = getRandomCountry()
-    console.log(randomCountry)
-    console.log(randomCountry.name)
+    console.log(getRandomCountry())
     return (
         <>
         <h1>Testing</h1>
         <p>What is the capital of {}</p>
-        {countryData.map(country => {
-          return <p>{country.name}</p>
-        })}
 
         </>
     )
