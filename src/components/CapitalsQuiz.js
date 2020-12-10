@@ -24,23 +24,28 @@ const CapitalsQuiz = () => {
     }
 
     const makeRandomList = () => {
+        // Initialize empty array
         let countryList = []
+        // Stock array with values
         for (let i = 0; i < 4; i++) {
             countryList.push(getRandomCountry())
         }
-        let countrySet = new Set(countryList)
-        if (countrySet.length < 4) {
-            makeRandomList()
+
+        for (let i = 0; i < countryList.length; i++) {
+            for (let j = i + 1; j < countryList.length - 1; j++) {
+                if (countryList[i] === countryList[j]) {
+                    makeRandomList()
+                }
+            }
         }
-        return countrySet
+        return countryList
     }
 
     const randomList = makeRandomList()
     console.log(randomList)
-
-    let randomIndex = Math.floor(Math.random() * 4)
-    console.log(randomIndex)
-    
+    let randomIndex = Math.floor(Math.random() * 4) 
+    let answer = randomList[randomIndex]
+    console.log(answer)
 
     return (
         <>
