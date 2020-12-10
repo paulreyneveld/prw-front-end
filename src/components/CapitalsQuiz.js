@@ -41,6 +41,17 @@ const CapitalsQuiz = () => {
         return countryList
     }
 
+    const handleChoice = (event) => {
+        console.log(event.target.innerText)
+        const userAnswer = event.target.innerText
+        if (userAnswer === answer.city) {
+            alert('Right')
+        }
+        else {
+            alert('Wrong')
+        }
+    }
+
     const randomList = makeRandomList()
     console.log(randomList)
     let randomIndex = Math.floor(Math.random() * 4) 
@@ -50,6 +61,10 @@ const CapitalsQuiz = () => {
     return (
         <>
         <h1>Testing</h1>
+        <p> What is the capital of {answer.country} </p>
+        {randomList.map( (country, index) => 
+            <button key={index} onClick={handleChoice}>{country.city}</button>
+        )}
         </>
     )
 }
