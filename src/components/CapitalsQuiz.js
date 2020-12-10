@@ -1,21 +1,12 @@
-import React from 'react'
-// First, I need to import the compiled json for all of the countries/capitals.
+import React, { useState, useEffect } from 'react'
 import countryInfo from '../countryInfo.json'
 
-/* Okay, so what are the steps I need to take?
-
-First, I need to import the compiled json for all of the countries/capitals.
-
-Second, I need to generate a random country/capital combination. One of these will be the question answer.
-
-Third, I need to generate three more random country/capital combinations. I don't want there to be any
-duplicates. 
-
-*/ 
-
-// Second, I need to generate a random country/capital combination. One of these will be the question answer.
-
 const CapitalsQuiz = () => {
+
+    const [quizContents, setQuizContents] = useState([])    
+    const [randomIndex, setRandomIndex] = useState(null)
+    const [answer, setAnswer] = useState([])
+    const [update, setUpdate] = useState(false)
 
     const getRandomCountry = () => {
         let randomIndex = Math.floor(countryInfo.length * Math.random())
@@ -23,6 +14,8 @@ const CapitalsQuiz = () => {
         return randomCountry
     }
 
+    useEffect(() => makeRandomList(), [])
+    
     const makeRandomList = () => {
         // Initialize empty array
         let countryList = []
@@ -38,33 +31,17 @@ const CapitalsQuiz = () => {
                 }
             }
         }
-        return countryList
+
+        const numInRange = Math.floor(Math.random() * 4)
+        setQuizContents(quizContents.concat(countryList))
+        setRandomIndex(numInRange)
     }
 
-    const handleChoice = (event) => {
-        console.log(event.target.innerText)
-        const userAnswer = event.target.innerText
-        if (userAnswer === answer.city) {
-            alert('Right')
-        }
-        else {
-            alert('Wrong')
-        }
-    }
-
-    const randomList = makeRandomList()
-    console.log(randomList)
-    let randomIndex = Math.floor(Math.random() * 4) 
-    let answer = randomList[randomIndex]
-    console.log(answer)
-
+    console.log(quizContents)
     return (
         <>
         <h1>Testing</h1>
-        <p> What is the capital of {answer.country} </p>
-        {randomList.map( (country, index) => 
-            <button key={index} onClick={handleChoice}>{country.city}</button>
-        )}
+        <p>{quizContents[0].country}</p>
         </>
     )
 }
