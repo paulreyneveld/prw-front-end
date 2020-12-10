@@ -35,15 +35,16 @@ const CapitalsQuiz = () => {
         return countrySet
     }
 
-    let randomList = makeRandomList()
+    const randomList = makeRandomList()
     console.log(randomList)
-    let arrayified = new Array(randomList)
-    console.log(arrayified)
+
+    let randomIndex = Math.floor(Math.random() * 4)
+    console.log(randomIndex)
+    
 
     return (
         <>
         <h1>Testing</h1>
-        <p>What is the capital of</p>
         </>
     )
 }
