@@ -28,6 +28,7 @@ const CapitalsQuiz = () => {
     }
 
     const [countryList, setCountryList] = useState(makeRandomList())
+    const [score, setScore] = useState(0)
 
     console.log(countryList)
 
@@ -35,10 +36,24 @@ const CapitalsQuiz = () => {
     console.log(countryList[randomIndex])
     const answer = countryList[randomIndex]
 
+    const handleButtonClick = (guess) => {
+        if (guess === answer.city) {
+            alert('right')
+            setCountryList(makeRandomList())
+            setScore(score + 1)
+            console.log(score)
+        }
+    }
+
     return (
         <>
-        <h1>Testing</h1>
-        <p>What is the capital of </p>
+        <h1>Score {score}</h1>
+        <p>What is the capital of {answer.country}?</p>
+        {
+            countryList.map((country, index) => 
+                <button key={index} onClick={() => handleButtonClick(country.city)}>{country.city}</button>
+            )
+        }
         </>
     )
 }
