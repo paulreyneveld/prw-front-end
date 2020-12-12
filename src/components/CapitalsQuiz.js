@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import countryInfo from '../countryInfo.json'
 
 const CapitalsQuiz = () => {
-
-    const [quizContents, setQuizContents] = useState([])    
-    const [randomIndex, setRandomIndex] = useState(null)
-    const [answer, setAnswer] = useState([])
-    const [update, setUpdate] = useState(false)
-
+    
     const getRandomCountry = () => {
         let randomIndex = Math.floor(countryInfo.length * Math.random())
         let randomCountry = countryInfo[randomIndex]
         return randomCountry
     }
-
-    useEffect(() => makeRandomList(), [])
     
     const makeRandomList = () => {
         // Initialize empty array
@@ -31,17 +24,21 @@ const CapitalsQuiz = () => {
                 }
             }
         }
-
-        const numInRange = Math.floor(Math.random() * 4)
-        setQuizContents(quizContents.concat(countryList))
-        setRandomIndex(numInRange)
+        return countryList
     }
 
-    console.log(quizContents)
+    const [countryList, setCountryList] = useState(makeRandomList())
+
+    console.log(countryList)
+
+    let randomIndex = Math.floor(Math.random() * 4) 
+    console.log(countryList[randomIndex])
+    const answer = countryList[randomIndex]
+
     return (
         <>
         <h1>Testing</h1>
-        <p>{quizContents[0].country}</p>
+        <p>What is the capital of </p>
         </>
     )
 }
