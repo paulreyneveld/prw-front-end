@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import countryInfo from '../countryInfo.json'
+import axios from 'axios'
 
 const CapitalsQuiz = () => {
     
@@ -26,7 +27,8 @@ const CapitalsQuiz = () => {
     }
 
     const getCountryInfo = (country) => {
-
+        axios.get(`https://restcountries.eu/rest/v2/name/${country}`)
+            .then(response => setCountryData(response.data))
     }
 
     const status = () => {
@@ -54,6 +56,8 @@ const CapitalsQuiz = () => {
             setScore(score + 1)
             console.log(score)
             setVeracity(true)
+            getCountryInfo(answer.country)
+            console.log(countryData)
         }
         else {
             alert('wrong')
