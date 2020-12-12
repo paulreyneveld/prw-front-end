@@ -52,12 +52,10 @@ const CapitalsQuiz = () => {
 
     const handleButtonClick = (guess) => {
         if (guess === answer.city) {
-            setCountryList(makeRandomList())
             setScore(score + 1)
-            console.log(score)
             setVeracity(true)
             getCountryInfo(answer.country)
-            console.log(countryData)
+            setCountryList(makeRandomList())
         }
         else {
             alert('wrong')
