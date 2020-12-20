@@ -23,7 +23,7 @@ const Header = () => {
                 <Nav.Link as={Link} to="/countryapi">Country API</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link as={Link} to="/dicationaryapi">Dictionary API</Nav.Link>
+                <Nav.Link as={Link} to="/dictionary">Dictionary API</Nav.Link>
             </Nav.Item>
             </Nav>
         </Navbar>

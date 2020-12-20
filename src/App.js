@@ -15,6 +15,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import CapitalsQuiz from './components/CapitalsQuiz'
+import Dictionary from './components/Dictionary'
 
 const App = () => {
 
@@ -55,8 +56,9 @@ const App = () => {
             <CapitalsQuiz countryData={countryData} />
             <Footer />
         </Route>
-        <Route path="/dicationaryapi">
+        <Route path="/dictionary">
             <Header />
+            <Dictionary />
             <Footer />
         </Route>
     </Switch>
