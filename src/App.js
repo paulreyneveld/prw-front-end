@@ -50,9 +50,13 @@ const App = () => {
             <Projects />
             <Footer />
         </Route>
-        <Route path="/apitest">
+        <Route path="/countryapi">
             <Header />
             <CapitalsQuiz countryData={countryData} />
+            <Footer />
+        </Route>
+        <Route path="/dicationaryapi">
+            <Header />
             <Footer />
         </Route>
     </Switch>
