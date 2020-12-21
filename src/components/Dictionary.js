@@ -22,7 +22,7 @@ const Dictionary = () => {
             .catch(error => console.log(error))
 
     }
-
+    
     console.log(definition)
 
 
