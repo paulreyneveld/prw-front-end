@@ -6,10 +6,11 @@ const Dictionary = () => {
 
     // Merriam API KEY
     const WEBSTER_API_KEY = process.env.REACT_APP_WEBSTERS_API_KEY
-    const API_URL = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=${WEBSTER_API_KEY}`
-    console.log(WEBSTER_API_KEY)
+    
     const [searchTerm, setSearchTerm] = useState('')
     const [definition, setDefinition] = useState([])
+
+    const API_URL = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/${searchTerm}?key=${WEBSTER_API_KEY}`
     
     const queryAPI = (event) => {
         event.preventDefault()
@@ -25,16 +26,16 @@ const Dictionary = () => {
     
     console.log(definition)
 
-
     return (
         <>
         <h1> hello world</h1> 
         <form onSubmit={queryAPI}>
-            <label>Search Term:</label>
+            <label>Search definition:</label>
+            <br />
             <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
             <button>Submit</button>
         </form>
-        {definition.map(entry => <p>{entry}</p>)}
+        {definition.map((entry, index) => <li key={index}>{entry}</li>)}
         </>
     )
 }
