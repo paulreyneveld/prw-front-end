@@ -28,9 +28,9 @@ const Dictionary = () => {
 
     return (
         <>
-        <h1> hello world</h1> 
         <form onSubmit={queryAPI}>
             <label>Search definition:</label>
+            <p>(courtesy of Merriam-Webster dictionary API)</p>
             <br />
             <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
             <button>Submit</button>
