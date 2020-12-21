@@ -5,9 +5,9 @@ import axios from 'axios'
 const Dictionary = () => {
 
     // Merriam API KEY
-    const API_KEY = ``
-    const API_URL = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=${API_KEY}`
-
+    const WEBSTER_API_KEY = process.env.REACT_APP_WEBSTERS_API_KEY
+    const API_URL = `https://www.dictionaryapi.com/api/v3/references/collegiate/json/voluminous?key=${WEBSTER_API_KEY}`
+    console.log(WEBSTER_API_KEY)
     const [searchTerm, setSearchTerm] = useState('')
     const [definition, setDefinition] = useState([])
     
