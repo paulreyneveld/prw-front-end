@@ -17,6 +17,17 @@ import Footer from './components/Footer'
 import CapitalsQuiz from './components/CapitalsQuiz'
 import Dictionary from './components/Dictionary'
 
+import { createStore } from 'redux'
+
+const definitionReducer = (state, action) => {
+    switch (action.type) {
+        case 'ADD_DEFINITION': 
+            return state.concat(action.data)
+        default: 
+            return state
+    }
+}
+
 const App = () => {
 
     const [countryData, setCountryData] = useState([])
