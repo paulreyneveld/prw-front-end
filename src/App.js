@@ -16,17 +16,18 @@ import Projects from './components/Projects'
 import Footer from './components/Footer'
 import CapitalsQuiz from './components/CapitalsQuiz'
 import Dictionary from './components/Dictionary'
+import definitionReducer from './reducers/definitionReducer'
 
 import { createStore } from 'redux'
 
-const definitionReducer = (state, action) => {
-    switch (action.type) {
-        case 'ADD_DEFINITION': 
-            return state.concat(action.data)
-        default: 
-            return state
-    }
-}
+const store = createStore(definitionReducer)
+
+store.dispatch({
+    type: 'ADD_DEFINITION',
+    data: { test: 'Bogus data'}
+})
+
+console.log(store.getState())
 
 const App = () => {
 
