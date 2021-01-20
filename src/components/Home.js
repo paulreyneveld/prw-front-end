@@ -8,7 +8,7 @@ const Home = () => {
         <Row>
             <Col xs={9} className="gutterfix">
 
-                <h3>My Philosopy</h3>
+                <h3>My Contention: </h3>
                 <br />
                 <h6>tl;dr.</h6>
                 <p><em>I’m a web developer who believes that the majority of software problems can be solved 
