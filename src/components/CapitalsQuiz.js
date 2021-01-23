@@ -2,6 +2,11 @@ import React, { useState } from 'react'
 import countryInfo from '../countryInfo.json'
 import axios from 'axios'
 
+
+// I want to refactor this entire component to work with redux for state management. 
+// I suspect I'll be able to squash the re-render bug incidentally through this process.
+// I also need to write better documentation because I'm not sure exactly what I was thinking here. 
+
 const CapitalsQuiz = () => {
     
     const getRandomCountry = () => {
