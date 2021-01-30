@@ -36,7 +36,6 @@ const Home = () => {
                 for the purpose of rapidly building solutions.</p>
             </Col>
             <Col className="gutterfix">
-            <h4> Pandora's API </h4>
 
             <WeatherAPI />
             </Col>
