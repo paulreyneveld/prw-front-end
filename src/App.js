@@ -16,6 +16,7 @@ import Projects from './components/Projects'
 import Footer from './components/Footer'
 import CapitalsQuiz from './components/CapitalsQuiz'
 import Dictionary from './components/Dictionary'
+import BlogPosts from './components/BlogPosts'
 
 const App = () => {
 
@@ -59,6 +60,11 @@ const App = () => {
         <Route path="/dictionary">
             <Header />
             <Dictionary />
+            <Footer />
+        </Route>
+        <Route path="/blogs">
+            <Header />
+            <BlogPosts />
             <Footer />
         </Route>
     </Switch>
