@@ -62,7 +62,7 @@ const App = () => {
             <Dictionary />
             <Footer />
         </Route>
-        <Route path="/blogs">
+        <Route path="/blog">
             <Header />
             <BlogPosts />
             <Footer />
