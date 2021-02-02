@@ -18,6 +18,7 @@ import CapitalsQuiz from './components/CapitalsQuiz'
 import Dictionary from './components/Dictionary'
 import BlogPosts from './components/BlogPosts'
 import Resources from './components/Resources'
+import Contact from './components/Contact'
 
 const App = () => {
 
@@ -72,6 +73,9 @@ const App = () => {
             <Header />
             <Resources />
             <Footer />
+        </Route>
+        <Route path="/contact">
+            <Contact />
         </Route>
     </Switch>
     </Router>
