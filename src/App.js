@@ -69,7 +69,9 @@ const App = () => {
             <Footer />
         </Route>
         <Route path="/resources">
+            <Header />
             <Resources />
+            <Footer />
         </Route>
     </Switch>
     </Router>
