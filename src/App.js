@@ -19,7 +19,7 @@ import Dictionary from './components/Dictionary'
 import BlogPosts from './components/BlogPosts'
 import Resources from './components/Resources'
 import Contact from './components/Contact'
-
+import Login from './components/Login'
 const App = () => {
 
     const [countryData, setCountryData] = useState([])
@@ -76,6 +76,9 @@ const App = () => {
         </Route>
         <Route path="/contact">
             <Contact />
+        </Route>
+        <Route path="/login">
+            <Login />
         </Route>
     </Switch>
     </Router>
