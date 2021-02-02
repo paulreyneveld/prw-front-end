@@ -17,6 +17,7 @@ import Footer from './components/Footer'
 import CapitalsQuiz from './components/CapitalsQuiz'
 import Dictionary from './components/Dictionary'
 import BlogPosts from './components/BlogPosts'
+import Resources from './components/Resources'
 
 const App = () => {
 
@@ -66,6 +67,9 @@ const App = () => {
             <Header />
             <BlogPosts />
             <Footer />
+        </Route>
+        <Route path="/resources">
+            <Resources />
         </Route>
     </Switch>
     </Router>
