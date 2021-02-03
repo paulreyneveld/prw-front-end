@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Row, Image } from 'react-bootstrap'
 import groceryImage from '../images/grocery-app-screen.png'
-import quizAppImage from '../images/quiz-app.png'
+import quizAppImage from '../images/quiz-app-screen.png'
 
 const Projects = () => {
     return (

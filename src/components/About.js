@@ -59,8 +59,10 @@ const About = () => {
              learn so much in the process that I wouldn’t want this journey to have gone any other way. </p>
         </Col>
         <Col className="gutterfix">
-        <h4> Pandora's API </h4>
-
+        <h4> Coding Efforts: </h4>
+        <p><a href="http://www.github.com/paulreyneveld" target="_blank">GitHub</a></p>
+        <p><a href="http://www.teamtreehouse.com/paulreyneveld" target="_blank">Treehouse Profile</a></p>
+        <p><a href="http://www.freecodecamp.org/paulreyneveld" target="_blank">freeCodeCamp Profile</a></p>
         </Col>
     </Row>
     )
