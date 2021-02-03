@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Row, Image } from 'react-bootstrap'
 import groceryImage from '../images/grocery-app-screen.png'
+import quizAppImage from '../images/quiz-app.png'
 
 const Projects = () => {
     return (
@@ -9,9 +10,8 @@ const Projects = () => {
                 <a href="https://immense-lowlands-07888.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Image src={groceryImage} /></a>
         </Col>
         <Col>
-            <a href="https://immense-lowlands-07888.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Image src={test} /></a>
+            <a href="https://paulreyneveld.github.io/THProj4/" target="_blank" rel="noopener noreferrer"><Image src={quizAppImage} /></a>
         </Col>
-
         </Row>
         
     )
