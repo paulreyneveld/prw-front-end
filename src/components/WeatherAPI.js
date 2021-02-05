@@ -41,7 +41,7 @@ const WeatherAPI = () => {
 
     return (
         <>
-        <h4>PDX Hourly Weather: </h4>
+        <h5>PDX Hourly Weather</h5>
         <ul className="weather-ul">
         {viewWeatherInfo()}
         </ul>

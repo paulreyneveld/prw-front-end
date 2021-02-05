@@ -34,9 +34,12 @@ footer {
 }
 
 .weather-ul {
-
+    padding-left: 5%;
+    font-size: 0.8em;
 }
+
 .weather-li {
     list-style-type: none;
+    padding-bottom: 7%;
 }
 
