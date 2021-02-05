@@ -8,7 +8,7 @@ const Projects = () => {
     return (
         <Row>
         <Col className="gutterfix">
-                <a href="https://thproj10api.herokuapp.com/courses" target="_blank" rel="noopener noreferrer"><Image src={coursesAppImage} /></a>
+                <a href="https://thproj10api.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Image src={coursesAppImage} /></a>
         </Col>
         <Col>
         <a href="https://immense-lowlands-07888.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Image src={groceryImage} /></a>

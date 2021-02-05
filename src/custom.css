@@ -13,8 +13,8 @@
 }
 
 .gutterfix {
-    padding-left: 3%;
-    padding-right: 5%;
+    padding-left: 2%;
+    padding-right: 0%;
 }
 
 .copyright {
@@ -31,5 +31,12 @@ footer {
     height: 3.5rem; 
     margin-top: 4em;
     font-size: 0.8em;
+}
+
+.weather-ul {
+
+}
+.weather-li {
+    list-style-type: none;
 }
 

@@ -16,7 +16,7 @@ const WeatherAPI = () => {
     }
 
     useEffect(getWeatherData, [])
-    console.log(weatherData)
+    
     const treatedHourlyData = weatherData.map(hour => {
         const timeStamp = hour.dt
         const date = new Date(timeStamp * 1000)
@@ -24,24 +24,15 @@ const WeatherAPI = () => {
         return { time: hours, pop: hour.pop, temp: hour.temp, feels_like: hour.feels_like }
     })
 
-    // const viewWeatherInfo = () => {
-    //     if (treatedHourlyData.length > 0) {
-    //         return (
-    //             `At ${treatedHourlyData[0].time}:00
-    //             Probability of Precipitation: ${treatedHourlyData[0].pop}`
-    //         )
-    //     }
-    // }
-
     const viewWeatherInfo = () => {
         if (treatedHourlyData.length > 0) {
             return (
-                treatedHourlyData.map((entry, i) => 
+                treatedHourlyData.slice(0,8).map((entry, i) => 
                 <>
-                <h5 key={entry.temp}>At {entry.time}:00 GMT</h5>
-                <p key={i}>Probability of Precipitation: {entry.pop}<br />
+                <h6 key={entry.temp}>{entry.time}:00 GMT</h6>
+                <li className="weather-li" key={i}>Probability of Precipitation: {entry.pop}<br />
                 Temperature: {entry.temp} <br />
-                Feels Like: {entry.feels_like}</p>
+                Feels Like: {entry.feels_like}</li>
                 </>
                 )
             )
@@ -51,7 +42,7 @@ const WeatherAPI = () => {
     return (
         <>
         <h4>PDX Hourly Weather: </h4>
-        <ul>
+        <ul className="weather-ul">
         {viewWeatherInfo()}
         </ul>
         </>
