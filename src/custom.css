@@ -33,12 +33,12 @@ footer {
     font-size: 0.8em;
 }
 
-.weather-ul {
+.sidebar-ul {
     padding-left: 5%;
     font-size: 0.8em;
 }
 
-.weather-li {
+.sidebar-li {
     list-style-type: none;
     padding-bottom: 7%;
 }

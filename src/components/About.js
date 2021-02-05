@@ -17,12 +17,12 @@ const About = () => {
         <Row>
         <Col xs={9} className="gutterfix">
 
-            <h3>About: A story of technical acumen</h3>
+            <h3>About, or how I came to be a developer</h3>
             <br />
             <p> Hello again! By now you know that I’m a web developer, but I guess you’re curious how I came to be one. 
             How nice! Well, I’ve been code adjacent for most of my life. As a young kid in the mid 90s, I started messing with 
             HTML via computers at the local library to build sites on the likes of Geocities (shout out to those who 
-            remember that platform), but my first real programming experience began in high school with C++ 
+            remember that platform), but my first real programming experience began in high school with C++, 
             though the knowledge I gathered was primarily used in the pursuit of self-made
             <a style={style} onClick={() => openInNewTab('https://en.wikipedia.org/wiki/MUD')}> MUDs </a>
             
@@ -59,10 +59,12 @@ const About = () => {
              learn so much in the process that I wouldn’t want this journey to have gone any other way. </p>
         </Col>
         <Col className="gutterfix">
-        <h4> Coding Efforts: </h4>
-        <p><a href="http://www.github.com/paulreyneveld" target="_blank">GitHub</a></p>
-        <p><a href="http://www.teamtreehouse.com/paulreyneveld" target="_blank">Treehouse Profile</a></p>
-        <p><a href="http://www.freecodecamp.org/paulreyneveld" target="_blank">freeCodeCamp Profile</a></p>
+        <h6> Coding Efforts</h6>
+        <ul className="sidebar-ul">
+        <li className="sidebar-li"><a href="http://www.github.com/paulreyneveld" target="_blank">GitHub</a></li>
+        <li className="sidebar-li"><a href="http://www.teamtreehouse.com/paulreyneveld" target="_blank">Treehouse Profile</a></li>
+        <li className="sidebar-li"><a href="http://www.freecodecamp.org/paulreyneveld" target="_blank">freeCodeCamp Profile</a></li>
+        </ul>
         </Col>
     </Row>
     )

@@ -3,7 +3,6 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Container } from 'react-bootstrap'
 import './custom.css'
-import WeatherAPI from './components/WeatherAPI'
 import {
     BrowserRouter as Router,
     Switch,
