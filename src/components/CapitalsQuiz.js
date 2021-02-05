@@ -25,20 +25,20 @@ const CapitalsQuiz = () => {
         return countryList
     }
 
-    const status = () => {
-        if (veracity) {
-            return (
-            <>
-            <p>Nice job</p>
-            <button onClick={() => setCountryList(makeRandomList())}>Next question</button>
-            </>
-            )
-        }
-    }
+    // const status = () => {
+    //     if (veracity) {
+    //         return (
+    //         <>
+    //         <p>Nice job</p>
+    //         <button onClick={() => setCountryList(makeRandomList())}>Next question</button>
+    //         </>
+    //         )
+    //     }
+    // }
 
     const [countryList, setCountryList] = useState(makeRandomList())
     const [correct, setCorrect] = useState(0)
-    const [veracity, setVeracity] = useState(null)
+    // const [veracity, setVeracity] = useState(null)
     const [incorrect, setIncorrect] = useState(0)
 
     let randomIndex = Math.floor(Math.random() * 4) 
@@ -47,7 +47,7 @@ const CapitalsQuiz = () => {
     const handleButtonClick = (guess) => {
         if (guess === answer.city) {
             setCorrect(() => correct + 1)
-            setVeracity(true)
+            // setVeracity(true)
             setCountryList(makeRandomList())
         }
         else {
@@ -69,7 +69,7 @@ const CapitalsQuiz = () => {
         }
         <p>Correct {correct}</p>
         <p>Incorrect {incorrect}</p>
-        {status()}
+        {/* {status()} */}
         </>
     )
 }
