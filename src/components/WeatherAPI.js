@@ -6,11 +6,13 @@ const weatherApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=45.47
 
 const WeatherAPI = () => {
     const [ weatherData, setWeatherData ] = useState([])
+    const [ loading, setLoading ] = useState(true)
 
     const getWeatherData = () => {
         return axios.get(weatherApiUrl)
             .then(response => {
                 setWeatherData(response.data.hourly)
+                setLoading(false)
             })
             .catch(error => console.log(error))
     }
@@ -25,6 +27,9 @@ const WeatherAPI = () => {
     })
 
     const viewWeatherInfo = () => {
+        if (loading) {
+            return (<p>loading. . . </p>)
+        }
         if (treatedHourlyData.length > 0) {
             return (
                 treatedHourlyData.slice(0,8).map((entry, i) => 
