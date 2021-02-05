@@ -37,34 +37,38 @@ const CapitalsQuiz = () => {
     }
 
     const [countryList, setCountryList] = useState(makeRandomList())
-    const [score, setScore] = useState(0)
+    const [correct, setCorrect] = useState(0)
     const [veracity, setVeracity] = useState(null)
+    const [incorrect, setIncorrect] = useState(0)
 
     let randomIndex = Math.floor(Math.random() * 4) 
     const answer = countryList[randomIndex]
 
     const handleButtonClick = (guess) => {
         if (guess === answer.city) {
-            setScore(() => score + 1)
+            setCorrect(() => correct + 1)
             setVeracity(true)
             setCountryList(makeRandomList())
         }
         else {
-            alert('wrong')
+            setIncorrect(() => incorrect + 1)
             setCountryList(makeRandomList())
         }
     }
 
     return (
         <>
-        <h1>Capital Quiz</h1>
+        <h5>Capital Quiz</h5>
         <p>What is the capital of {answer.country}?</p>
         {
             countryList.map((country, index) => 
-                <button key={index} onClick={() => handleButtonClick(country.city)}>{country.city}</button>
+                <>
+                <button key={index} onClick={() => handleButtonClick(country.city)}>{country.city}</button><br />
+                </>
             )
         }
-        <p>Score {score}</p>
+        <p>Correct {correct}</p>
+        <p>Incorrect {incorrect}</p>
         {status()}
         </>
     )

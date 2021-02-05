@@ -2,6 +2,7 @@ import React from 'react'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import WeatherAPI from './WeatherAPI'
+import CapitalsQuiz from './CapitalsQuiz'
 
 const Home = () => {
     return (
@@ -36,7 +37,7 @@ const Home = () => {
                 for the purpose of rapidly building solutions.</p>
             </Col>
             <Col className="gutterfix">
-
+            <CapitalsQuiz />
             <WeatherAPI />
             </Col>
         </Row>
