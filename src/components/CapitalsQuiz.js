@@ -1,11 +1,5 @@
 import React, { useState } from 'react'
 import countryInfo from '../countryInfo.json'
-import axios from 'axios'
-
-
-// I want to refactor this entire component to work with redux for state management. 
-// I suspect I'll be able to squash the re-render bug incidentally through this process.
-// I also need to write better documentation because I'm not sure exactly what I was thinking here. 
 
 const CapitalsQuiz = () => {
     
@@ -31,11 +25,6 @@ const CapitalsQuiz = () => {
         return countryList
     }
 
-    const getCountryInfo = (country) => {
-        axios.get(`https://restcountries.eu/rest/v2/name/${country}`)
-            .then(response => setCountryData(response.data))
-    }
-
     const status = () => {
         if (veracity) {
             return (
@@ -48,7 +37,6 @@ const CapitalsQuiz = () => {
     }
 
     const [countryList, setCountryList] = useState(makeRandomList())
-    const [countryData, setCountryData] = useState([])
     const [score, setScore] = useState(0)
     const [veracity, setVeracity] = useState(null)
 
@@ -57,9 +45,8 @@ const CapitalsQuiz = () => {
 
     const handleButtonClick = (guess) => {
         if (guess === answer.city) {
-            setScore(score + 1)
+            setScore(() => score + 1)
             setVeracity(true)
-            getCountryInfo(answer.country)
             setCountryList(makeRandomList())
         }
         else {
