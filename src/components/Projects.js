@@ -24,14 +24,14 @@ const Projects = () => {
                 <p><a href="#">Repo</a></p>
         </Col>
         <Col>
-        <a href="https://immense-lowlands-07888.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Image src={groceryImage} /></a>
+        <a href="https://immense-lowlands-07888.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Image style={{paddingBottom: 10}} src={groceryImage} /></a>
                 <p>This is a clone of a grocery list app that I put together to synchronize the the needs of myself and my partner. 
                 It's running with a React frontend. State management is through the Hooks API, and data persistence is handled through 
                 MongoDB</p>
                 <p><a href="#">Repo</a></p>
         </Col>
         <Col>
-            <a href="https://paulreyneveld.github.io/THProj4/" target="_blank" rel="noopener noreferrer"><Image src={quizAppImage} /></a>
+            <a href="https://paulreyneveld.github.io/THProj4/" target="_blank" rel="noopener noreferrer"><Image style={{paddingBottom: 10}} src={quizAppImage} /></a>
             <p>This was my fourth Treehouse project, and I include it because I like games. The object is to guess the pre-seeded phrase
             before the user runs out of chances. It's written in vanilla JS without the help of any frontend library.</p>
             <p><a href="#">Repo</a></p>

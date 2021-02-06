@@ -34,10 +34,10 @@ const WeatherAPI = () => {
             return (
                 treatedHourlyData.slice(0,8).map((entry, i) => 
                 <>
-                <h6 key={entry.temp}>{entry.time}:00 GMT</h6>
-                <li className="sidebar-li" key={i}>Probability of Precipitation: {entry.pop * 100}%<br />
-                Temperature: {entry.temp} <br />
-                Feels Like: {entry.feels_like}</li>
+                <h6 key={entry.temp}>{entry.time}:00</h6>
+                <li className="sidebar-li" key={i}>Probability of Precipitation: {Math.round(entry.pop * 100)}%<br />
+                Temperature: {Math.round(entry.temp)} <br />
+                Feels Like: {Math.round(entry.feels_like)}</li>
                 </>
                 )
             )
@@ -46,7 +46,7 @@ const WeatherAPI = () => {
 
     return (
         <>
-        <h5>PDX Hourly Weather</h5>
+        <h6>PDX Hourly Weather</h6>
         <ul className="sidebar-ul">
         {viewWeatherInfo()}
         </ul>
