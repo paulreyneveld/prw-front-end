@@ -8,6 +8,7 @@ const About = () => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
         if (newWindow) newWindow.opener = null
     }
+
     const style = {
         color: 'blue',
         cursor: 'pointer'
@@ -24,9 +25,7 @@ const About = () => {
             HTML via computers at the local library to build sites on the likes of Geocities (shout out to those who 
             remember that platform), but my first real programming experience began in high school with C++, 
             though the knowledge I gathered was primarily used in the pursuit of self-made
-            <a style={style} onClick={() => openInNewTab('https://en.wikipedia.org/wiki/MUD')}> MUDs </a>
-            
-            
+            <span style={style} onClick={() => openInNewTab('https://en.wikipedia.org/wiki/MUD')}> MUDs </span>
              that consisted of jokes about my friends' last names. 
             What can I say, I was fifteen.</p>
 
@@ -61,9 +60,11 @@ const About = () => {
         <Col className="gutterfix">
         <h6> Coding Efforts</h6>
         <ul className="sidebar-ul">
-        <li className="sidebar-li"><a href="http://www.github.com/paulreyneveld" target="_blank">GitHub</a></li>
-        <li className="sidebar-li"><a href="http://www.teamtreehouse.com/paulreyneveld" target="_blank">Treehouse Profile</a></li>
-        <li className="sidebar-li"><a href="http://www.freecodecamp.org/paulreyneveld" target="_blank">freeCodeCamp Profile</a></li>
+        <li className="sidebar-about-li"><span style={style} onClick={() => openInNewTab('http://www.github.com/paulreyneveld')}> GitHub </span></li>
+
+        <li className="sidebar-about-li"><span style={style} onClick={() => openInNewTab('http://www.teamtreehouse.com/paulreyneveld')}> Treehouse Profile </span></li>
+
+        <li className="sidebar-about-li"><span style={style} onClick={() => openInNewTab('http://www.freecodecamp.org/paulreyneveld')}> freeCodeAcademy Profile </span></li>
         </ul>
         </Col>
     </Row>
