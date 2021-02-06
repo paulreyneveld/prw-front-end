@@ -3,10 +3,27 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import WeatherAPI from './WeatherAPI'
 import CapitalsQuiz from './CapitalsQuiz'
-import Dictonary from './Dictionary'
+import Dictionary from './Dictionary'
 
 const Home = () => {
+
+    const randomComponent = () => {
+        const randomNum = Math.floor(Math.random() * 3)
+        console.log(randomNum)
+        switch(randomNum) {
+            case 0:
+                return <WeatherAPI />
+            case 1:
+                return <CapitalsQuiz />
+            case 2:
+                return <Dictionary />
+            default: 
+                return <p>Something went wrong</p>
+        }
+    }
+
     return (
+        <>
         <Row>
             <Col xs={9} className="gutterfix">
 
@@ -39,11 +56,10 @@ const Home = () => {
             </Col>
             <Col className="gutterfix">
             <h5>Pandora's sidebar:</h5>
-            <Dictonary />
-            <CapitalsQuiz />
-            <WeatherAPI />
+            {randomComponent()}
             </Col>
         </Row>
+        </>
     )
 }
 
