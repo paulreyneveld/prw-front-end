@@ -10,13 +10,13 @@ const Projects = () => {
         <p>Disclaimer: Please allow a few moments for individual projects to load. </p>
         <Row>
         <Col className="gutterfix">
-                <a href="https://thproj10api.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Image src={coursesAppImage} /></a>
+                <a href="https://thproj10api.herokuapp.com/" target="_blank" rel="noopener noreferrer"><Image style={{paddingBottom: 10}} src={coursesAppImage} /></a>
                 <p>This project was the culmination of my  Treehouse Techdegree experience. It consists of a frontend 
                 running React with state management through the Context API and a backend via Express. It is a fully functional course management tool. 
                 For demo purposes, the database is Sqlite with Sequelize functioning
                 as an ORM. One can also feel free to create a new user account for testing purposes or use the credentials below. 
                 </p>
-                <p>For testing purposes: <br />
+                <p>
                     Username: joe@smith.com
                     <br />
                     Password: joepassword
@@ -32,6 +32,9 @@ const Projects = () => {
         </Col>
         <Col>
             <a href="https://paulreyneveld.github.io/THProj4/" target="_blank" rel="noopener noreferrer"><Image src={quizAppImage} /></a>
+            <p>This was my fourth Treehouse project, and I include it because I like games. The object is to guess the pre-seeded phrase
+            before the user runs out of chances. It's written in vanilla JS without the help of any frontend library.</p>
+            <p><a href="#">Repo</a></p>
         </Col>
         </Row>
         </>

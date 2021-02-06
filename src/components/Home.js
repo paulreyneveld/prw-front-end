@@ -3,13 +3,14 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import WeatherAPI from './WeatherAPI'
 import CapitalsQuiz from './CapitalsQuiz'
+import Dictonary from './Dictionary'
 
 const Home = () => {
     return (
         <Row>
             <Col xs={9} className="gutterfix">
 
-                <h3>My Contention: </h3>
+                <h3>My Contention</h3>
                 <br />
                 <h6>tl;dr.</h6>
                 <p><em>I’m a web developer who believes that the majority of software problems can be solved 
@@ -37,6 +38,8 @@ const Home = () => {
                 for the purpose of rapidly building solutions.</p>
             </Col>
             <Col className="gutterfix">
+            <h5>Pandora's sidebar:</h5>
+            <Dictonary />
             <CapitalsQuiz />
             <WeatherAPI />
             </Col>
